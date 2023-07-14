@@ -5,11 +5,10 @@ import requests
 import json
 
 
-def get_account_info(domain, access_token):
+def get_account_info(domain, account_id, access_token):
     headers = {'Authorization': 'Bearer {}'.format(access_token)}
-    res = requests.get('https://' + domain + '/api/v1/accounts/verify_credentials', headers=headers).json()
+    res = requests.get('https://' + domain + '/api/v1/accounts/' + account_id, headers=headers).json()
     return res
-
 
 def post_toot(domain, access_token, params):
     headers = {'Authorization': 'Bearer {}'.format(access_token)}

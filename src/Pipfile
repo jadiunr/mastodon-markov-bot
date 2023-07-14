@@ -12,6 +12,7 @@ requests = "*"
 pandas = "*"
 markovify = "*"
 mecab-python3 = "==0.996.5"
+pyyaml = "*"
 
 [requires]
 python_version = "3.8"
