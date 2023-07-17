@@ -48,7 +48,7 @@ def worker():
             if ('discord' in write):
                 discordTool.post(write['discord']['webhook_url'], sentence)
             if ('mastodon' in write):
-                mastodonTool.post_toot(write['mastodon']['domain'], write['mastodon']['access_token'], sentence)
+                mastodonTool.post_toot(write['mastodon']['domain'], write['mastodon']['access_token'], {"status": sentence})
         except Exception as e:
             print("投稿エラー: {}".format(e))
 
